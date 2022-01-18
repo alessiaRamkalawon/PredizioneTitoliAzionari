@@ -1,6 +1,6 @@
 # Sistema di predizione di titoli azionari
 **Membri del gruppo**: Ramkalawon Alessia 706212, Lovreglio Giuseppe 708245
-<br> **Link Repository:** *link*
+<br> **Link Repository:** https://github.com/alessiaRamkalawon/PredizioneTitoliAzionari
 <br>
 
 Il progetto consiste in una piccola web-application in grado di raccogliere dati rigurdanti titoli azionari da un base di conoscenza ed effettuare delle predizioni.
