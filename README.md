@@ -23,6 +23,7 @@ Il progetto è composto dai seguenti file: <br>
 1) *training.py*: contiene le istruzioni necessarie alla raccolta dei dati e all'addestramento del modello.
 2) *main.py*: contiene le istruzioni necessarie all'esecuzione della web-application.
 3) *modello.h5*: contiene il modello addestrato e serializzato su file. <br>
+
 **Scelte di progettazione**   
 Per lo sviluppo dell'applicazione è stato scelto il linguaggio Python<br>
 Come sorgente di conoscenza da cui estrapolare i dati relativi ai titoli azionari, è stato scelto yahoo finance.
