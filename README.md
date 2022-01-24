@@ -31,7 +31,7 @@ Come periodo è stato preso in considerazione di default il 2010-2019.
 <br>
 Prima di creare il modello, sono state eseguite alcune operazioni preliminari. 
 I dati sono stati filtrati per eliminare informazioni inutili e dopodichè sono stati divisi in Training set (70%) e Test set(30%).
-Inoltre i valori sono stati scalati in un range [0-1]. <br>
+Inoltre i valori contenuti nel training set e test set sono stati scalati in un range [0-1]. <br>
 Dopodichè si è passati alla creazione del modello di apprendimento. Si è utilizzando un approccio di apprendimento supervisionato con il fine di effettuare le predizioni mediante regressione. Nello specifico è stata utilizzata una rete neurale con layer LSTM(Long Short Term Memory) composto da 1 layer di input, 3 layer intermedi e 1 finale così composti: <br>
 **1° layer:** 50 unità <br>
 **2° layer:** 60 unità <br>
