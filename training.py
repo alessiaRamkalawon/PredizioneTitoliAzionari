@@ -9,7 +9,7 @@ dataInizio = '2010-01-01'
 dataFine = '2019-12-31'
 
 #leggo i dati da yahoo finance
-df = data.DataReader('APPL','yahoo',dataInizio,dataFine)
+df = data.DataReader('AAPL','yahoo',dataInizio,dataFine)
 df = df.reset_index()
 
 #rimuovo le colonne che non servono
@@ -88,6 +88,6 @@ x_test , y_test = np.array(x_test), np.array(y_test)
 #Faccio le predizioni
 y_predicted = model.predict(x_test)
 
-scaleFactor = 1/scaler.scale_
+scaleFactor = 1/scaler.scale_[0]
 y_predicted = y_predicted * scaleFactor
 y_test = y_test * scaleFactor
