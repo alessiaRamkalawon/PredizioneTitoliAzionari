@@ -36,7 +36,7 @@ Dopodichè si è passati alla creazione del modello di apprendimento. Si è util
 **1° layer:** 50 unità <br>
 **2° layer:** 60 unità <br>
 **3° layer:** 80 unità <br>
-**4° layer:** 1200 unità <br>
+**4° layer:** 120 unità <br>
 **5° layer:** 1 unità (il valore predetto) <br>
 Come funzione di attivazione è stata utilizzata ReLU (Rectified linear unit activation function).
 Infine è stato addestrato il modello con i dati di training e test ed è stato serializzato su file.
