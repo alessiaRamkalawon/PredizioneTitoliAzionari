@@ -26,13 +26,14 @@ Il progetto è composto dai seguenti file: <br>
 
 **Scelte di progettazione**   
 Per lo sviluppo dell'applicazione è stato scelto il linguaggio Python<br>
-Come sorgente di conoscenza da cui estrapolare i dati relativi ai titoli azionari, è stato scelto yahoo finance.
-Come periodo è stato preso in considerazione di default il 2010-2019.
+Come periodo temporale da analizzare e da cui trarre informazioni su cui fare eventuali predizioni è stato preso in considerazione di default il periodo 2010-2019.
+<br>
+Come sorgente di conoscenza da cui estrapolare i dati relativi ai titoli azionari, è stato scelto 'Yahoo finance' che fornisce notizie finanziarie, dati e commenti relativi ai diversi titoli azionari.
 <br>
 Prima di creare il modello, sono state eseguite alcune operazioni preliminari. 
 I dati sono stati filtrati per eliminare informazioni inutili e dopodichè sono stati divisi in Training set (70%) e Test set(30%).
-Inoltre i valori contenuti nel training set e test set sono stati scalati in un range [0-1]. <br>
-Dopodichè si è passati alla creazione del modello di apprendimento. Si è utilizzando un approccio di apprendimento supervisionato con il fine di effettuare le predizioni mediante regressione. Nello specifico è stata utilizzata una rete neurale con layer LSTM(Long Short Term Memory) composto da 1 layer di input, 3 layer intermedi e 1 finale così composti: <br>
+Inoltre i valori contenuti nel training set e test set sono stati scalati in un range [0-1]  in modo tale da poter essere processati dal modello. Per fare ciò è stata utilizzata la classe MinMaxScaler che ha prodotto un fattore di scala di 0,044. <br>
+Dopodichè si è passati alla creazione del modello di apprendimento. Si è utilizzando un approccio di apprendimento supervisionato con il fine di effettuare le predizioni mediante regressione. Si parla di apprendimento supervisionato in quanto il modello è stato costruito partendo da un insieme di dati di addestramento di cui sono noti i valori di output (target)  e di regressione perché quest'ultimi sono valori continui e non classi.​ Nello specifico è stata utilizzata una rete neurale con layer LSTM(Long Short Term Memory) composto da 1 layer di input, 3 layer intermedi e 1 finale così composti: <br>
 **1° layer:** 50 unità <br>
 **2° layer:** 60 unità <br>
 **3° layer:** 80 unità <br>
@@ -51,5 +52,10 @@ Dopo aver effettuato la predizione, il sistema riporta i valori dal range [0-1] 
 * _matplotlib_ per la presentazione dei grafici
 * _numpy_ e _pandas_ per la gestione del dataset
 * _keras_ e _sklearn_ per la creazione e addestramento del modello
+<br>
+**Valutazione**
+<br>
+Come parametro di valutazione è stato preso in considerazione l'errore assoluto medio. Nel caso di test, ovvero prendendo in considerazione il titolo azionario Apple, il valore dell'errore assoluto medio riscontrato è di 1,045$.​
 
+Dopodiché è stato calcolato l'errore assoluto medio percentuale dividendo il prezzo medio per l'errore assoluto medio. Il valore risultante per il caso di test è stato di 14% circa.
 
