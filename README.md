@@ -33,7 +33,8 @@ Come sorgente di conoscenza da cui estrapolare i dati relativi ai titoli azionar
 Prima di creare il modello, sono state eseguite alcune operazioni preliminari. 
 I dati sono stati filtrati per eliminare informazioni inutili e dopodichè sono stati divisi in Training set (70%) e Test set(30%).
 Inoltre i valori contenuti nel training set e test set sono stati scalati in un range [0-1]  in modo tale da poter essere processati dal modello. Per fare ciò è stata utilizzata la classe MinMaxScaler che ha prodotto un fattore di scala di 0,044. <br>
-Dopodichè si è passati alla creazione del modello di apprendimento. Si è utilizzando un approccio di apprendimento supervisionato con il fine di effettuare le predizioni mediante regressione. Si parla di apprendimento supervisionato in quanto il modello è stato costruito partendo da un insieme di dati di addestramento di cui sono noti i valori di output (target)  e di regressione perché quest'ultimi sono valori continui e non classi.​ Nello specifico è stata utilizzata una rete neurale con layer LSTM(Long Short Term Memory) composto da 1 layer di input, 3 layer intermedi e 1 finale così composti: <br>
+Dopodichè si è passati alla creazione del modello di apprendimento. 
+Si è utilizzato un approccio di apprendimento supervisionato con il fine di effettuare le predizioni mediante regressione. Si parla di apprendimento supervisionato in quanto il modello è stato costruito partendo da un insieme di dati di addestramento di cui sono noti i valori di output (target)  e di regressione perché quest'ultimi sono valori continui e non classi.​ Nello specifico è stata utilizzata una rete neurale con layer LSTM(Long Short Term Memory) composto da 1 layer di input, 3 layer intermedi e 1 finale così composti: <br>
 **1° layer:** 50 unità <br>
 **2° layer:** 60 unità <br>
 **3° layer:** 80 unità <br>
@@ -53,7 +54,7 @@ Dopo aver effettuato la predizione, il sistema riporta i valori dal range [0-1] 
 * _numpy_ e _pandas_ per la gestione del dataset
 * _keras_ e _sklearn_ per la creazione e addestramento del modello
 <br>
-**Valutazione**
+Valutazione
 <br>
 Come parametro di valutazione è stato preso in considerazione l'errore assoluto medio. Nel caso di test, ovvero prendendo in considerazione il titolo azionario Apple, il valore dell'errore assoluto medio riscontrato è di 1,045$.​
 
